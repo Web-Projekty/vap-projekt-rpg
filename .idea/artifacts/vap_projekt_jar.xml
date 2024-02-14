@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="vap-projekt:jar">
+    <output-path>$PROJECT_DIR$/jar</output-path>
+    <root id="archive" name="vap-projekt.jar">
+      <element id="module-output" name="vap-projekt" />
+    </root>
+  </artifact>
+</component>
