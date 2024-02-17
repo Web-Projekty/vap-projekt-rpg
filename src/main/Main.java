@@ -1,7 +1,6 @@
 package main;
 
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +14,6 @@ public class Main {
         window.pack();
         window.setLocationRelativeTo(null);
         window.setVisible(true);
-
         gamePanel.startGameThread();
     }
 }

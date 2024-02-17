@@ -4,7 +4,7 @@ import main.GamePanel;
 import main.KeyHandler;
 
 import javax.imageio.ImageIO;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Objects;
@@ -64,9 +64,6 @@ public class Player extends Entity {
     }
 
     public void draw(Graphics2D g2) {
-//        g2.setColor(Color.white);
-//
-//        g2.fillRect(x, y, gp.tileSize, gp.tileSize);
 
         BufferedImage image = null;
 
@@ -109,8 +106,7 @@ public class Player extends Entity {
         }
         if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
             spriteCounter++;
-        }
-        else {
+        } else {
             spriteNum = 1;
         }
 
