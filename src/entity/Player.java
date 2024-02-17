@@ -4,7 +4,7 @@ import main.GamePanel;
 import main.KeyHandler;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
@@ -17,9 +17,11 @@ public class Player extends Entity {
         this.keyH = keyH;
         GetPlayerImage();
         setDefaultValues();
+        spriteCount = 2;
     }
 
     public void GetPlayerImage() {
+
         try {
             up1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_1.png"));
             up2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_2.png"));
@@ -70,18 +72,49 @@ public class Player extends Entity {
 
         switch (direction) {
             case "up":
-                image = up1;
+                if (spriteNum == 1) {
+                    image = up1;
+                }
+                if (spriteNum == 2) {
+                    image = up2;
+                }
                 break;
             case "down":
-                image = down1;
+                if (spriteNum == 1) {
+                    image = down1;
+                }
+                if (spriteNum == 2) {
+                    image = down2;
+                }
                 break;
             case "left":
-                image = left1;
+                if (spriteNum == 1) {
+                    image = left1;
+                }
+                if (spriteNum == 2) {
+                    image = left2;
+                }
                 break;
             case "right":
-                image = right1;
+                if (spriteNum == 1) {
+                    image = right1;
+                }
+                if (spriteNum == 2) {
+                    image = right2;
+                }
+
                 break;
 
+        }
+        spriteCounter++;
+        if (spriteCounter > 10) {
+            if (spriteNum < spriteCount) {
+                spriteNum++;
+
+            } else
+                spriteNum = 1;
+            spriteCounter = 0;
+            System.out.println(spriteNum);
         }
         g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
     }
