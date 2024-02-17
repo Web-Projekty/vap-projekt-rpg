@@ -15,7 +15,7 @@ public class Player extends Entity {
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
         this.keyH = keyH;
-
+        GetPlayerImage();
         setDefaultValues();
     }
 
@@ -67,7 +67,6 @@ public class Player extends Entity {
 
         BufferedImage image = null;
 
-        GetPlayerImage();
 
         switch (direction) {
             case "up":
