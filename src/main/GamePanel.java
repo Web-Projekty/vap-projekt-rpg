@@ -16,7 +16,14 @@ public class GamePanel extends JPanel implements Runnable {
     public final int maxScreenCol = 16;
     public final int maxScreenRow = 12;
     public final int screenWidth = tileSize * maxScreenCol;
-    public final int getScreenHeight = tileSize * maxScreenRow;
+    public final int screenHeight = tileSize * maxScreenRow;
+
+    //WORLD SETTINGS
+public final int maxWorldCol = 50;
+public final int maxWorldRow = 50;
+public final int worldWidth = tileSize * maxWorldCol;
+public final int worldHeight = tileSize * maxWorldRow;
+
 
     int FPS = 60;
 
@@ -26,7 +33,7 @@ public class GamePanel extends JPanel implements Runnable {
     Player player = new Player(this, keyH);
 
     public GamePanel() {
-        this.setPreferredSize(new Dimension(screenWidth, getScreenHeight));
+        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
