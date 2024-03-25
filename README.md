@@ -33,7 +33,7 @@
    - (optional) Achievementy
 - Počet hráčů: 1 (potenciálně více - splitscreen/local multiplayer)
 - Ovládání: **klávesnice**, myš(menu - pokud bude, low priority), ovladač(pokud bude moc volného času)
-- Grafika: ano (pixelart)
+- Grafika: ano (pixelart 16x16)
 - Zvuky: jednoduchý soundtrack, SFX
 
 # Technical setup
